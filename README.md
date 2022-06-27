@@ -4,10 +4,6 @@ Using the API below, which will fetch Github gists, display each user’s avatar
 (owner.avatar_url) and files name (files.xxx) in a list.
 The list needs to be high performance, well structured, and easy to maintain.
 
-Please check the following link for more details:
-
-https://www.figma.com/file/qaEyraIXcczAAAem6noMHs/TZ---interview---advanced?node-id=1%3A797
-
 You can use start will ReactJS template project using CLI: create-react-app TestOne
 
 ## In each row:
