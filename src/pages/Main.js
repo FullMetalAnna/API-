@@ -30,7 +30,7 @@ const Main = ({ data, setCurrentPage, setData }) => {
 		});
 	}, []);
 
-// front end pagination bad, 
+// front end pagination, 
 //back eng pagination//
 	return !data ? (
 		<p className='bg-gray-200 text-3xl flex justify-center items-center m-2 w-[100vw] h-[100vh]'>
@@ -39,7 +39,7 @@ const Main = ({ data, setCurrentPage, setData }) => {
 	) : (
 		<div className="text-right">
 			{data.map((person) => {
-				{/* key value je vidljiva u Components u browesru, gde je Card komponent "obuhvatio podatke" 
+				{/*
 			person.owner.avatar_url
 			array[n].owner.avar_url
 			*/}
