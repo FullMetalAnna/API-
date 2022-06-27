@@ -1,6 +1,36 @@
-# Getting Started with Create React App
+# Fetching APIs from Github Gists
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Using the API below, which will fetch Github gists, display each user’s avatar
+(owner.avatar_url) and files name (files.xxx) in a list.
+The list needs to be high performance, well structured, and easy to maintain.
+
+Please check the following link for more details:
+
+https://www.figma.com/file/qaEyraIXcczAAAem6noMHs/TZ---interview---advanced?node-id=1%3A797
+
+You can use start will ReactJS template project using CLI: create-react-app TestOne
+
+## In each row:
+
+● Profile Image is from (array[n].owner.avatar_url)
+● File Name is from (array[n].files.xxx)
+API: https://api.github.com/gists/public
+API Doc: https://developer.github.com/v3/gists/#list-all-public-gists
+
+![Review](./src/components/imagesPro/Image2.png)
+
+Page query options:
+● since=YYYY-MM-DDTHH:MM:SSZ
+● per_page=30
+● page=2
+
+## Requirements:
+● Scroll 30 items then go to the next page using pagination
+● Scrolling the list should be smooth
+● Indicator to show loading state while the next page data is being fetched
+● Scroll to the top when the next page is loaded
+● When a row is clicked, the corresponding title should change its color, and picture
+should get darker to indicate a pressed state
 
 ## Available Scripts
 
@@ -39,32 +69,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
