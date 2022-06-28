@@ -2,52 +2,41 @@ import React, { useEffect } from "react";
 import { Card } from "../components";
 import { animateScroll } from "react-scroll";
 import ReactPaginate from "react-paginate";
-const Main = ({ data, setCurrentPage, setData }) => {
-	// console.log(dataArray);
-	//check if the data has arrived or not
-    // changin data tyle from obj to array
-	// const dataArray = [Object.values(data)];
-	// array from object values 
+const Main = ({ data, setCurrentPage, setData, currentPage }) => {
 
 	const increaseCurrentPage = () => {
 		setData(null);
-
 		setCurrentPage((pre) => pre + 1);
 	};
-	const decreaseCurrentPage = () => {
+    const decreaseCurrentPage = () => {
 		setCurrentPage((pre) => {
 			setData(null);
-			let currentpage = pre - 1;
-			return currentpage > 1 ? currentpage : 1;
+			let page = pre - 1;
+			return page > 1 ? page : 1;
+            
 		});
 	};
+    window.scrollTo(0,0);
 
-	useEffect(() => {
-		animateScroll.scrollToTop({
-			duration: 2000,
-			delay: 500,
-			smooth: true,
-		});
-	}, []);
+useEffect(() =>{
+ console.log(currentPage)    
+},[])
 
-// front end pagination bad, 
-//back eng pagination//
 	return !data ? (
 		<p className='bg-gray-200 text-3xl flex justify-center items-center m-2 w-[100vw] h-[100vh]'>
 			Loading ...
 		</p>
 	) : (
-		<div className="text-right">
+		<div className="text-right scroll-smooth">
 			{data.map((person) => {
-				{/* key value je vidljiva u Components u browesru, gde je Card komponent "obuhvatio podatke" 
-			person.owner.avatar_url
-			array[n].owner.avar_url
-			*/}
+		
 				return <Card key={person.id} person={person} />;
 			})}
-						<button onClick={decreaseCurrentPage} className="w-20 h-10 m-2 bg-gray-400 rounded text-white">Previus</button>
+						<button onClick={decreaseCurrentPage} className={`w-20 h-10 m-2 bg-blue-400 rounded text-white ${currentPage - 1 < 1 ? 'hidden' : null}`}>{"<"+(currentPage -1)}
+</button>
+						<button className={`w-20 h-10 m-2 bg-gray-400 rounded text-white`}>{currentPage}</button>
 
-						<button onClick={increaseCurrentPage} className="w-20 h-10 m-2 bg-orange-400 rounded text-white">Next</button>
+						<button onClick={increaseCurrentPage} className={`w-20 h-10 m-2 bg-orange-400 rounded text-white`}>{(currentPage +1)+">"}</button>
 		</div>
 	);
 };

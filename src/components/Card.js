@@ -6,9 +6,8 @@ const Card = ({ person }) => {
     const [clicked, setClicked] = useState(false);
 
   return (
-    <div onClick={() => setClicked(true)}  className=' flex justify-start items-center p-2 my-2 max-[100%] h-28'>
-    {/*Profile Image​ ​is from ​​(array[n].owner.avatar_url)
-//  File Name​ ​is from ​​(array[n].files.xxx)*/}
+    <div onClick={() => setClicked(true)}  className=' flex justify-start items-center p-2 my-2 max-[100%] h-28 '>
+  
     <img 
     className={`w-1/6 object-contain h-28 ${clicked ? "opacity-50" : ""} `}
     src={person.owner.avatar_url} 

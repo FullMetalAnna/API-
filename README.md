@@ -1,4 +1,4 @@
-# Fetching APIs from Github Gists
+# Fetching API from Github Gists
 
 Using the API below, which will fetch Github gists, display each user’s avatar
 (owner.avatar_url) and files name (files.xxx) in a list.
@@ -8,7 +8,7 @@ Please check the following link for more details:
 
 https://www.figma.com/file/qaEyraIXcczAAAem6noMHs/TZ---interview---advanced?node-id=1%3A797
 
-You can use start will ReactJS template project using CLI: create-react-app TestOne
+You can use start will ReactJS template project using CLI: create-react-app API
 
 ## In each row:
 
