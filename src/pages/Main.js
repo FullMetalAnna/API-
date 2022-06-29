@@ -29,7 +29,6 @@ useEffect(() =>{
 	) : (
 		<div className="text-right scroll-smooth">
 			{data.map((person) => {
-		
 				return <Card key={person.id} person={person} />;
 			})}
 						<button onClick={decreaseCurrentPage} className={`w-20 h-10 m-2 bg-blue-400 rounded text-white ${currentPage - 1 < 1 ? 'hidden' : null}`}>{"<"+(currentPage -1)}
