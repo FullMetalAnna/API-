@@ -15,7 +15,7 @@ You can use start will ReactJS template project using CLI: create-react-app API
 ## API: https://api.github.com/gists/public
 ## API Doc: https://developer.github.com/v3/gists/#list-all-public-gists
 
-![Review](./src/components/imagesPro/Image2.png)
+![Review](./src/components/imagesPro/Image1.png)
 
 Page query options:
 * since=YYYY-MM-DDTHH:MM:SSZ
